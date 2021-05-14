@@ -1,3 +1,3 @@
-# react-vucvmm
+# Shopping cart
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-vucvmm)
+A Shopping cart with all the functionalities a cart should have.
