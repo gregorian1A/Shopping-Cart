@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #997688;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+.logo {
+   margin: 10px 0;
+   background-color: inherit;
+}
+.cart-image i {
+  background-color: #997688;
+}
+.amount {
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+ 
+}
+.margin {
+  margin: 70px 0 40px 0;
+}
+.empty {
+  margin-top: 20px;
+  padding: 5px 10px;
+  color: white;
+  background-color: blue;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border: 1px solid #997688;
+  padding: 10px;
+}
+.card .left {
+  display: flex;
+} 
+.card .left div {
+  margin: auto 90px auto 10px;
+}
+.card .left div p {
+  color: red;
+  font-weight: 700;
+}
+.card .left div h2 {
+ font-family: monospace;
+ font-size: 25px;
+}
+.card .left div h3 {
+ font-family: monospace;
+ font-size: 25px;
+}
+.card .right {
+  display: flex;
+  flex-direction: column;
+  margin: auto 20px;
+} 
+.card .right .right-amount {
+  text-align: center;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  font-size: 20px;
+}
+.card i {
+  font-size: 30px;
+}
+.flex {
+  display: flex;
+}
+.total {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 10px;
+  
+}
+.total-amount {
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+.clear-btn {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 15px;
+  background-color: pink;
+  font-weight: 600;
+}
