@@ -74,6 +74,9 @@ const DataProvider = ({ children }) => {
       total = parseFloat(total.toFixed(2))
       return { ...state, total, amount }
     }
+    if(action.type === "RESET") {
+      return ({...state, cart: products})
+    }
     return state
   }
 
@@ -96,6 +99,9 @@ const DataProvider = ({ children }) => {
   const decrement = (id) => {
     dispatch({ type: "DECREMENT", payload: id })
   }
+  const reset = () => {
+    dispatch({ type: "RESET" })
+  }
   useEffect(() => {
     dispatch({ type: "TOTALS" })
   }, [state.cart])
@@ -106,6 +112,7 @@ const DataProvider = ({ children }) => {
       remove,
       increment,
       decrement,
+      reset,
     }}>
       {children}
     </DataContext.Provider>
@@ -130,13 +137,13 @@ const App = () => {
 }
 
 const CartContainer = () => {
-  const { cart, total, clearCart } = useGlobalContext();
+  const { cart, total, clearCart, reset } = useGlobalContext();
 
   if (cart.length === 0) {
     return (<div className="cards">
       <h1 className="margin">Your Cart</h1>
       <h3>Cart is currently empty</h3>
-     <button className="empty">Return Home</button>
+     <button onClick={reset} className="empty">Return Home</button>
     </div>)
   }
   return (
