@@ -92,7 +92,7 @@ const DataProvider = ({ children }) => {
 
   const initialState = {
     loading: false,
-    amount: 0,
+    quantity: 0,
     cart: products,
     total: 0,
   };
